@@ -33,13 +33,14 @@ public class Dealership {
         return inventory;
     }
 
+    //adding vehicle
     public void addVehicle(Vehicle vehicle) {
         inventory.add(vehicle);
+        //todo: print for adding vehicle to inventory
     }
 
     public void removeVehicle(int vehicleVin) {
-
+          //todo: remove by vin
+        }
     }
 
-
-}

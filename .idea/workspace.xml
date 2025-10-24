@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="808fd069-c4e5-40f9-884f-8f8a48b0e8a0" name="Changes" comment="vehicle class">
-      <change afterPath="$PROJECT_DIR$/DealershipFileManager" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Vehicle.java" afterDir="false" />
+    <list default="true" id="808fd069-c4e5-40f9-884f-8f8a48b0e8a0" name="Changes" comment="changes to Dealership">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,12 +85,21 @@
       <option name="project" value="LOCAL" />
       <updated>1761310014720</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changes to Dealership">
+      <option name="closed" value="true" />
+      <created>1761322788799</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761322788799</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="vehicle class" />
-    <option name="LAST_COMMIT_MESSAGE" value="vehicle class" />
+    <MESSAGE value="changes to Dealership" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes to Dealership" />
   </component>
 </project>
