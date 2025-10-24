@@ -3,7 +3,7 @@ package com.pluralsight;
 import java.util.ArrayList;
 
 public class Dealership {
-
+    //what do we know?
     private String name;
     private String address;
     private String phoneNumber;
