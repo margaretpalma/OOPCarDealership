@@ -60,12 +60,15 @@ public class DealershipFileManager {
 
     // dealership goes to file
     public void saveDealership(Dealership dealership) {
-//        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
-//
-//            // write dealership info
-//            bw.write(dealership.getName() + "|" + dealership.getAddress() + "|" + dealership.getPhoneNumber());
-//            bw.newLine();
-//
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
+            // write dealership info
+            bw.write(dealership.getName() + "|" + dealership.getAddress() + "|" + dealership.getPhoneNumber());
+            bw.newLine();
+
+            for(Vehicle v : dealership.getAllVehicles()){
+                bw.write(v.toFileFormat());
+                bw.newLine();
+            }
 //            // write vehicle info
 //            for (Vehicle v : dealership.getAllVehicles()) {
 //                String vehicleLine = v.getVehicleVin() + "|" +
@@ -79,9 +82,9 @@ public class DealershipFileManager {
 //                bw.write(vehicleLine);
 //                bw.newLine();
 //            }
-//
-//        } catch (IOException e) {
-//            System.out.println("Error Writing File: " + e.getMessage()); // fixed typo
-//        }
+
+        } catch (IOException e) {
+            System.out.println("Error Writing File: " + e.getMessage()); // fixed typo
+        }
     }
 }

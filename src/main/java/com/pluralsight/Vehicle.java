@@ -54,4 +54,29 @@ public class Vehicle {
         public double getPrice() {
                 return price;
         }
+
+        @Override
+        public String toString() {
+                return String.format("%d | %d %s %s | %s | %d mi | %.2f",
+                        vehicleVin,
+                        vehicleYear,
+                        vehicleMake,
+                        vehicleModel,
+                        vehicleType,
+                        vehicleColor,
+                        odometer,
+                        price);
+        }
+
+        public String toFileFormat() {
+                //save to file
+         return vehicleVin + "|"
+               + vehicleYear
+               + "|" + vehicleMake
+               + "|" + vehicleModel
+               + "|" + vehicleType
+               + "|" + vehicleColor
+               + "|" + odometer
+               + "|" + price;
+        }
 }
