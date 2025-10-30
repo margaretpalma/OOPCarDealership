@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="808fd069-c4e5-40f9-884f-8f8a48b0e8a0" name="Changes" comment="find vehicle by year">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" afterDir="false" />
+    <list default="true" id="808fd069-c4e5-40f9-884f-8f8a48b0e8a0" name="Changes" comment="added console helper">
+      <change afterPath="$PROJECT_DIR$/DealershipFile.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/DealershipFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/DealershipFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealershipFile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761760857637</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added console helper">
+      <option name="closed" value="true" />
+      <created>1761835158228</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761835158228</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -203,6 +210,7 @@
     <MESSAGE value="dealershipFileManager updates" />
     <MESSAGE value="toFileFormat" />
     <MESSAGE value="find vehicle by year" />
-    <option name="LAST_COMMIT_MESSAGE" value="find vehicle by year" />
+    <MESSAGE value="added console helper" />
+    <option name="LAST_COMMIT_MESSAGE" value="added console helper" />
   </component>
 </project>

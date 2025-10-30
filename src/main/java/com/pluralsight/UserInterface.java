@@ -8,23 +8,57 @@ public class UserInterface {
     private Dealership dealership;
     private final Scanner scanner = new Scanner(System.in);
 
+
+    //display menu
     public void display() {
         init();
 
         int command;
 
 
-    //while loop
+        //while loop
 
-    while(true) {
+        while (true) {
+            displayMenu();
 
+            command = ConsoleHelper.promptForInt("Enter Command");
+
+            switch (command) {
+                case 1:
+                    //processGetAllVehiclesRequest();
+                    break;
+
+                //other cases
+
+                case 99:
+                    System.out.println("Exiting Program");
+                    return;
+                default:
+                    System.out.println("Invalid Option.");
+
+            }
 
         }
 
     }
 
 
+    //dealership info
+    private void init(){
+        DealershipFileManager fileManager = new DealershipFileManager("DealershipFile.csv");
+        this.dealership = fileManager.getDealership();
 
+        if(dealership != null) {
+            System.out.println("Dealership : " + dealership.getName());
+        } else {
+            System.out.println("Error Loading Dealership");
+        }
+    }
 
+    private void displayMenu(){
+        System.out.println("*****Main Menu*****");
+        System.out.println("1 - List All Vehicles");
+        //other menu options
+        System.out.println("99 - Quit");
     }
 }
