@@ -73,9 +73,15 @@ public class UserInterface {
 
     //helper method for vehicles
     private void displayVehicles(ArrayList<Vehicle> vehicles){
-        displayVehicles(vehicles);
+        if (vehicles == null || vehicles.isEmpty()) {
+            System.out.println("No Vehicles Found");
+            return;
+        }
 
-    }
-
-
+    //print inventory list
+        System.out.println("---Inventory List---");
+        for (Vehicle v : vehicles){
+            System.out.println(v.toString());
+        }
+    }\
 }
