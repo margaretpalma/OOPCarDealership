@@ -1,10 +1,10 @@
 package com.pluralsight;
 
+
 public class Program {
     public static void main(String[] args) {
-        UserInterface userInterface = new UserInterface();
-        userInterface.display();
+        // Create and start the user interface
+        UserInterface ui = new UserInterface();
+        ui.display();
     }
-
-
 }
