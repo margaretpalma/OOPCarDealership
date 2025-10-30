@@ -60,10 +60,10 @@ public class DealershipFileManager {
 
         return dealership;
     }
-
-
     //---------------------------
     // dealership goes to file
+
+    //save to file
     public void saveDealership(Dealership dealership) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
             // write dealership info

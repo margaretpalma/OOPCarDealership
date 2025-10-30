@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="808fd069-c4e5-40f9-884f-8f8a48b0e8a0" name="Changes" comment="added console helper">
-      <change afterPath="$PROJECT_DIR$/DealershipFile.csv" afterDir="false" />
+    <list default="true" id="808fd069-c4e5-40f9-884f-8f8a48b0e8a0" name="Changes" comment="phases 1-4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealershipFile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/DealershipFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/DealershipFileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +197,39 @@
       <option name="project" value="LOCAL" />
       <updated>1761835158228</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="init() in userinterface">
+      <option name="closed" value="true" />
+      <created>1761836623411</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1761836623411</updated>
+    </task>
+    <task id="LOCAL-00015" summary="displayvehicles">
+      <option name="closed" value="true" />
+      <created>1761836841847</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1761836841847</updated>
+    </task>
+    <task id="LOCAL-00016" summary="helper method/ processGetAllVehiclesRequest">
+      <option name="closed" value="true" />
+      <created>1761836968347</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1761836968347</updated>
+    </task>
+    <task id="LOCAL-00017" summary="print inventory list">
+      <option name="closed" value="true" />
+      <created>1761837296592</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1761837296592</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -211,6 +243,11 @@
     <MESSAGE value="toFileFormat" />
     <MESSAGE value="find vehicle by year" />
     <MESSAGE value="added console helper" />
-    <option name="LAST_COMMIT_MESSAGE" value="added console helper" />
+    <MESSAGE value="init() in userinterface" />
+    <MESSAGE value="displayvehicles" />
+    <MESSAGE value="helper method/ processGetAllVehiclesRequest" />
+    <MESSAGE value="print inventory list" />
+    <MESSAGE value="phases 1-4" />
+    <option name="LAST_COMMIT_MESSAGE" value="phases 1-4" />
   </component>
 </project>

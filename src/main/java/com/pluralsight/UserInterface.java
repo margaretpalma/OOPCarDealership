@@ -7,11 +7,10 @@ public class UserInterface {
 
     //load dealership from file
     private Dealership dealership;
-    private final Scanner scanner = new Scanner(System.in);
-
 
     //display menu
     public void display() {
+        //
         init();
 
         int command;
@@ -24,13 +23,36 @@ public class UserInterface {
 
             command = ConsoleHelper.promptForInt("Enter Command");
 
+            //switch statements for menu
             switch (command) {
+                //todo: all other cases
                 case 1:
-                    //processGetAllVehiclesRequest();
+                    processGetAllVehiclesRequest();
                     break;
-
-                //other cases
-
+                case 2:
+                    processGetByPriceRequest();
+                    break;
+                case 3:
+                    processGetbyMakeModelRequest();
+                    break;
+                case 4:
+                    processsGetByYearRequest();
+                    break;
+                case 5:
+                    processGetByColorRequest();
+                    break;
+                case 6:
+                    processGetByMileageRequest();
+                    break;
+                case 7:
+                    processGetByTypeRequest();
+                    break;
+                case 8:
+                    processAddVehicleRequest();
+                    break;
+                case 9:
+                    processRemoveVehicleRequest();
+                    break;
                 case 99:
                     System.out.println("Exiting Program");
                     return;
@@ -38,7 +60,6 @@ public class UserInterface {
                     System.out.println("Invalid Option.");
 
             }
-
         }
 
     }
@@ -83,5 +104,5 @@ public class UserInterface {
         for (Vehicle v : vehicles){
             System.out.println(v.toString());
         }
-    }\
+    }
 }
