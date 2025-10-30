@@ -1,3 +1,5 @@
+//read from file
+
 package com.pluralsight;
 
 import java.io.*;
@@ -30,8 +32,8 @@ public class DealershipFileManager {
                 dealership = new Dealership(name, address, phone);
             }
 
-            //------------------------
-            // vehicle lines
+        //------------------------
+        // read vehicles
 
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split("\\|");
@@ -46,18 +48,21 @@ public class DealershipFileManager {
                 double price = Double.parseDouble(parts[7]); // price is double
 
                 Vehicle vehicle = new Vehicle(vin, vehicleYear, vehicleMake, vehicleModel, vehicleType, vehicleColor, odometer, price);
+        // add vehicle to dealership
+                dealership.addVehicle(vehicle);
 
-                dealership.addVehicle(vehicle); // add vehicle to dealership
             }
-
+        // catching exception
         } catch (IOException e) {
-            // catching exception
+
             System.out.println("Error Reading File: " + e.getMessage());
         }
 
-        return dealership; // fixed missing semicolon
+        return dealership;
     }
 
+
+    //---------------------------
     // dealership goes to file
     public void saveDealership(Dealership dealership) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
@@ -69,19 +74,6 @@ public class DealershipFileManager {
                 bw.write(v.toFileFormat());
                 bw.newLine();
             }
-//            // write vehicle info
-//            for (Vehicle v : dealership.getAllVehicles()) {
-//                String vehicleLine = v.getVehicleVin() + "|" +
-//                        v.getVehicleYear() + "|" +
-//                        v.getVehicleMake() + "|" +
-//                        v.getVehicleModel() + "|" +
-//                        v.getVehicleType() + "|" +
-//                        v.getVehicleColor() + "|" +
-//                        v.getOdometer() + "|" +
-//                        v.getPrice();
-//                bw.write(vehicleLine);
-//                bw.newLine();
-//            }
 
         } catch (IOException e) {
             System.out.println("Error Writing File: " + e.getMessage()); // fixed typo

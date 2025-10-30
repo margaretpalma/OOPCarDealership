@@ -1,6 +1,9 @@
 package com.pluralsight;
 
 public class Vehicle {
+//define what a vehicle is
+
+
         //what do we know?
         private int vehicleVin;
         private int vehicleYear;

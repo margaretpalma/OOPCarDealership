@@ -1,3 +1,5 @@
+//list of vehicles
+//search remove add
 package com.pluralsight;
 
 import java.util.ArrayList;
@@ -39,12 +41,11 @@ public class Dealership {
     // adding vehicle
     public void addVehicle(Vehicle vehicle) {
         inventory.add(vehicle);
-        // todo: print for adding vehicle to inventory if needed
+        // todo: print for adding vehicle to inventory
     }
 
     // remove a vehicle by VIN
     public void removeVehicle(int vehicleVin) {
-        // iterate backwards
         Iterator<Vehicle> it = inventory.iterator();
         while (it.hasNext()) {
             Vehicle v = it.next();
@@ -54,6 +55,8 @@ public class Dealership {
             }
         }
     }
+
+
     //price range
     public ArrayList<Vehicle> findByPriceRange(double minPrice, double maxPrice){
         ArrayList<Vehicle> results = new ArrayList<>();
@@ -69,7 +72,6 @@ public class Dealership {
 //todo: fix this
 
     // find by make and model
-
     public ArrayList<Vehicle> findByMakeModel(String make, String model) {
         ArrayList<Vehicle> results = new ArrayList<>();
 
@@ -93,7 +95,7 @@ public class Dealership {
         return results;
     }
 
-    //year
+    //find by year
 
     public ArrayList<Vehicle> findByYear(int minYear, int maxYear){
 
@@ -106,4 +108,20 @@ public class Dealership {
         return results;
 
     }
-}
+    //find by color
+    public ArrayList<Vehicle> findByColor(String color){
+        ArrayList<Vehicle> results = new ArrayList<>();
+        String colorLower = (color == null) ? "" : color.toLowerCase();
+        for (Vehicle v : inventory){
+            if(v.getVehicleColor().toLowerCase().contains(colorLower)){
+                results.add(v);
+            }
+        }
+        return results;
+    }
+
+
+
+//todo: find by mile range
+    //public ArrayList<Vehicle> findbyMileRange(int odometer)
+    }
