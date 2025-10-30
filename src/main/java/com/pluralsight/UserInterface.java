@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -55,10 +56,21 @@ public class UserInterface {
         }
     }
 
+    //display menu
+    //todo: other menu options
     private void displayMenu(){
         System.out.println("*****Main Menu*****");
         System.out.println("1 - List All Vehicles");
         //other menu options
         System.out.println("99 - Quit");
     }
+
+
+
+    private void displayVehicles(ArrayList<Vehicle> vehicles){
+        displayVehicles(vehicles);
+
+    }
+
+
 }
