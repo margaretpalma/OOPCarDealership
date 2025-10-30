@@ -65,8 +65,13 @@ public class UserInterface {
         System.out.println("99 - Quit");
     }
 
+    //list vehicles
+    private void processGetAllVehiclesRequest(){
+        ArrayList<Vehicle> vehicles = dealership.getAllVehicles();
+        displayVehicles(vehicles);
+    }
 
-
+    //helper method for vehicles
     private void displayVehicles(ArrayList<Vehicle> vehicles){
         displayVehicles(vehicles);
 
