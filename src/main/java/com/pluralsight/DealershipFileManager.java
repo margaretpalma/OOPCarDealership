@@ -78,5 +78,7 @@ public class DealershipFileManager {
         } catch (IOException e) {
             System.out.println("Error Writing File: " + e.getMessage()); // fixed typo
         }
+
+
     }
 }

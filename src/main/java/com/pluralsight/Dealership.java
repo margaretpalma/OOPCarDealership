@@ -58,11 +58,11 @@ public class Dealership {
 
 
     //price range
-    public ArrayList<Vehicle> findByPriceRange(double minPrice, double maxPrice){
+    public ArrayList<Vehicle> findByPriceRange(double minPrice, double maxPrice) {
         ArrayList<Vehicle> results = new ArrayList<>();
 
-        for(Vehicle v : inventory){
-            if (v.getPrice() >= minPrice && v.getPrice() <= maxPrice){
+        for (Vehicle v : inventory) {
+            if (v.getPrice() >= minPrice && v.getPrice() <= maxPrice) {
                 results.add(v);
             }
         }
@@ -75,45 +75,46 @@ public class Dealership {
     public ArrayList<Vehicle> findByMakeModel(String make, String model) {
         ArrayList<Vehicle> results = new ArrayList<>();
 
-    // Normalize input (avoid null pointer)
+        // Normalize input (avoid null pointer)
         String makeLower = (make == null) ? "" : make.toLowerCase();
         String modelLower = (model == null) ? "" : model.toLowerCase();
 
-    // loop through inventory
+        // loop through inventory
         for (Vehicle v : inventory) {
-          String vehicleMake = v.getVehicleMake().toLowerCase();
-          String vehicleModel = v.getVehicleModel().toLowerCase();
+            String vehicleMake = v.getVehicleMake().toLowerCase();
+            String vehicleModel = v.getVehicleModel().toLowerCase();
 
-    //make and model
-        if (vehicleMake.contains(makeLower) &&
-            (modelLower.isEmpty() || vehicleModel.contains(modelLower))) {
+            //make and model
+            if (vehicleMake.contains(makeLower) &&
+                    (modelLower.isEmpty() || vehicleModel.contains(modelLower))) {
 
-        results.add(v);
-                }
+                results.add(v);
             }
+        }
 
         return results;
     }
 
     //find by year
 
-    public ArrayList<Vehicle> findByYear(int minYear, int maxYear){
+    public ArrayList<Vehicle> findByYear(int minYear, int maxYear) {
 
         ArrayList<Vehicle> results = new ArrayList<>();
-        for(Vehicle v : inventory){
-            if(v.getVehicleYear() >= minYear && v.getVehicleYear() <= maxYear){
+        for (Vehicle v : inventory) {
+            if (v.getVehicleYear() >= minYear && v.getVehicleYear() <= maxYear) {
                 results.add(v);
             }
         }
         return results;
 
     }
+
     //find by color
-    public ArrayList<Vehicle> findByColor(String color){
+    public ArrayList<Vehicle> findByColor(String color) {
         ArrayList<Vehicle> results = new ArrayList<>();
         String colorLower = (color == null) ? "" : color.toLowerCase();
-        for (Vehicle v : inventory){
-            if(v.getVehicleColor().toLowerCase().contains(colorLower)){
+        for (Vehicle v : inventory) {
+            if (v.getVehicleColor().toLowerCase().contains(colorLower)) {
                 results.add(v);
             }
         }
@@ -121,7 +122,33 @@ public class Dealership {
     }
 
 
+    //todo: find by mile range
+// Find by mileage range
+    public ArrayList<Vehicle> findByMileageRange(int minMiles, int maxMiles) {
+        ArrayList<Vehicle> results = new ArrayList<>();
 
-//todo: find by mile range
-    //public ArrayList<Vehicle> findbyMileRange(int odometer)
+        for (Vehicle v : inventory) {
+            if (v.getOdometer() >= minMiles && v.getOdometer() <= maxMiles) {
+                results.add(v);
+            }
+        }
+
+        return results;
     }
+
+//find by type
+
+    public ArrayList<Vehicle> findByType(String type) {
+        ArrayList<Vehicle> results = new ArrayList<>();
+
+        String typeLower = (type == null) ? "" : type.toLowerCase();
+
+        for (Vehicle v : inventory) {
+            if (v.getVehicleType().toLowerCase().contains(typeLower)){
+                results.add(v);
+            }
+        }
+        return results;
+    }
+}
+
