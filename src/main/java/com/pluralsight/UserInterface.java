@@ -46,15 +46,15 @@ public class UserInterface {
                 case 7:
                     processGetByTypeRequest();
                     break;
-//               // case 8:
-//                 //   processAddVehicleRequest();
-//                    break;
-//                case 9:
-//                    processRemoveVehicleRequest();
-//                    break;
-////                case 99:
-//                    System.out.println("Exiting Program");
-//                    return;
+                case 8:
+                    processAddVehicleRequest();
+                    break;
+                case 9:
+                    processRemoveVehicleRequest();
+                    break;
+                case 99:
+                    System.out.println("Exiting Program");
+                    return;
                 default:
                     System.out.println("Invalid Option.");
 
@@ -119,8 +119,8 @@ public class UserInterface {
         System.out.println("---Search By Price Range ");
 
 
-        float minPrice = ConsoleHelper.promptForFloat("Enter Minimum Price");
-        float maxPrice = ConsoleHelper.promptForFloat("Enter Maximum Price");
+        double minPrice = ConsoleHelper.promptForDouble("Enter Minimum Price");
+        double maxPrice = ConsoleHelper.promptForDouble("Enter Maximum Price");
 
         ArrayList<Vehicle> results = dealership.findByPriceRange(minPrice, maxPrice);
 
@@ -165,19 +165,38 @@ public class UserInterface {
         displayVehicles(results);
     }
 
-//    private void processGetByTypeRequest(){
-//        System.out.println("---Search By Type---");
-//        String type = ConsoleHelper.promptForString("Enter Vehicle Type (Car, Truck, Van");
-//
-//        ArrayList<Vehicle> results = dealership.find
-//
+    private void processGetByTypeRequest(){
+        System.out.println("---Search By Type---");
+        String type = ConsoleHelper.promptForString("Enter Vehicle Type (Car, Truck, Van");
+
+        ArrayList<Vehicle> results = dealership.findByType(type);
+        displayVehicles(results);
+    }
+
+    private void processAddVehicleRequest(){
+        System.out.println("---Add Vehicle---");
+
+        int vehicleVin = ConsoleHelper.promptForInt("Enter Vin Number: ");
+        int vehicleYear = ConsoleHelper.promptForInt("Enter Vehicle Year: ");
+        String vehicleMake = ConsoleHelper.promptForString("Enter Vehicle Make: ");
+        String vehicleModel = ConsoleHelper.promptForString("Enter Vehicle Model: ");
+        String vehicleType = ConsoleHelper.promptForString("Enter Vehicle Type: ");
+        String vehicleColor = ConsoleHelper.promptForString("Enter Vehicle Color: ");
+        int odometer = ConsoleHelper.promptForInt("Enter Vehicle Mileage: ");
+        double price = ConsoleHelper.promptForDouble("Enter Vehicle Price");
 
     }
 
+    private void processRemoveVehicleRequest(){
+        System.out.println("---Remove A Vehicle ---");
+
+        int remove = ConsoleHelper.promptForInt("Enter Vehicle Vin To Remove");
+
+        ArrayList<Vehicle> results = dealership.removeVehicle(remove);
+        displayVehicles(results);
+
+    }
 }
-//        System.out.println("5 - Find Vehicles By Type(Car, Truck, Van");
-//        System.out.println("6 - Find Vehicles By Type");
-//        System.out.println("7 - List All Vehicles");
-//        System.out.println("8 - Add A Vehicle");
+
 //        System.out.println("9 - Remove A Vehicle");
 //        System.out.println("99 - Quit Program");

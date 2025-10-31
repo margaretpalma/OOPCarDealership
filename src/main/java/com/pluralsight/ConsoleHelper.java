@@ -21,25 +21,11 @@ public class ConsoleHelper {
                 result = scanner.nextInt();
                 scanner.nextLine();
                 isValid = true;
-            }
-            catch (Exception ex) {                  //catching exceptions
+            } catch (Exception ex) {                  //catching exceptions
                 scanner.nextLine();
                 System.out.println("Invalid entry.");
             }
         } while (!isValid);
-        return result;
-    }
-
-    public static int promptForIntAlt(String prompt) {
-        int result = 0;
-        try {
-            System.out.println(prompt + ":");
-            result = scanner.nextInt();
-            scanner.nextLine();
-        } catch (Exception ex) {
-            scanner.nextLine();
-            System.out.println("Invalid entry. Input whole number: ");
-        }
         return result;
     }
 
@@ -50,10 +36,12 @@ public class ConsoleHelper {
         return result;
     }
 
-    public static long promptForLong(String prompt) {
+    public static double promptForDouble(String prompt) {
         System.out.println(prompt + ": ");
-        long result = scanner.nextLong();
+        double result = scanner.nextDouble();
         scanner.nextLine();
         return result;
+
+
     }
 }

@@ -45,15 +45,15 @@ public class Dealership {
     }
 
     // remove a vehicle by VIN
-    public void removeVehicle(int vehicleVin) {
+    public ArrayList<Vehicle> removeVehicle(int vehicleVin) {
         Iterator<Vehicle> it = inventory.iterator();
         while (it.hasNext()) {
             Vehicle v = it.next();
             if (v.getVehicleVin() == vehicleVin) {
                 it.remove();
-                return; //
             }
         }
+        return null;
     }
 
 

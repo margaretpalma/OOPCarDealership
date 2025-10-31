@@ -43,13 +43,13 @@ public class DealershipFileManager {
                 String vehicleMake = parts[2];
                 String vehicleModel = parts[3];
                 String vehicleType = parts[4];
-                String vehicleColor = parts[5]; // fixed typo
-                int odometer = Integer.parseInt(parts[6]); // fixed syntax
-                double price = Double.parseDouble(parts[7]); // price is double
+                String vehicleColor = parts[5];
+                int odometer = Integer.parseInt(parts[6]);
+                double price = Double.parseDouble(parts[7]);
 
-                Vehicle vehicle = new Vehicle(vin, vehicleYear, vehicleMake, vehicleModel, vehicleType, vehicleColor, odometer, price);
-        // add vehicle to dealership
-                dealership.addVehicle(vehicle);
+                Vehicle v = new Vehicle(vin, vehicleYear, vehicleMake, vehicleModel, vehicleType, vehicleColor, odometer, price);
+                // add vehicle to dealership
+                dealership.addVehicle(v);
 
             }
         // catching exception
