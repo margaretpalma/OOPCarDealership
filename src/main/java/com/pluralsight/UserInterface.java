@@ -26,25 +26,24 @@ public class UserInterface {
             switch (command) {
                 //todo: all other cases
                 case 1:
-                    processGetAllVehiclesRequest();
-                    break;
-                case 2:
                     processGetByPriceRequest();
                     break;
-                case 3:
-                    processGetByMakeModelRequest();
+                case 2:processGetByMakeModelRequest();
                     break;
-                case 4:
+                case 3:
                     processGetByYearRequest();
                     break;
-                case 5:
+                case 4:
                     processGetByColorRequest();
                     break;
-                case 6:
+                case 5:
                     processGetByMileageRequest();
                     break;
-                case 7:
+                case 6:
                     processGetByTypeRequest();
+                    break;
+                case 7:
+                    processGetAllVehiclesRequest();
                     break;
                 case 8:
                     processAddVehicleRequest();
@@ -81,15 +80,14 @@ public class UserInterface {
     private void displayMenu() {
         System.out.println("*****Main Menu*****");
 
-        System.out.println("1 - Find Vehicles By Price Range ");
+        System.out.println("1 - Find Vehicles By Price Range");
         System.out.println("2 - Find Vehicles By Make/Model");
         System.out.println("3 - Find Vehicles By Year Range");
         System.out.println("4 - Find Vehicles By Color");
         System.out.println("5 - Find Vehicles By Type(Car, Truck, Van");
-        System.out.println("6 - Find Vehicles By Type");
-        System.out.println("7 - List All Vehicles");
-        System.out.println("8 - Add A Vehicle");
-        System.out.println("9 - Remove A Vehicle");
+        System.out.println("6 - List All Vehicles");
+        System.out.println("7 - Add A Vehicle");
+        System.out.println("8 - Remove A Vehicle");
         System.out.println("99 - Quit Program");
     }
 
@@ -116,7 +114,7 @@ public class UserInterface {
 
     //get by price request
     private void processGetByPriceRequest() {
-        System.out.println("---Search By Price Range ");
+        System.out.println("---Search By Price Range--- ");
 
 
         double minPrice = ConsoleHelper.promptForDouble("Enter Minimum Price");
@@ -142,13 +140,14 @@ public class UserInterface {
 
         String color = ConsoleHelper.promptForString("Enter Vehicle Color");
         ArrayList<Vehicle> results = dealership.findByColor(color);
+        displayVehicles(results);
     }
 
     private void processGetByMakeModelRequest(){
-        System.out.println("---Search By Make/Model");
+        System.out.println("---Search By Make/Model---");
 
         String make = ConsoleHelper.promptForString("Enter Vehicle Make");
-        String model = ConsoleHelper.promptForString("Enter Vehicle Model - ");
+        String model = ConsoleHelper.promptForString("Enter Vehicle Model");
 
         ArrayList<Vehicle> results = dealership.findByMakeModel(make, model);
         displayVehicles(results);
@@ -167,7 +166,7 @@ public class UserInterface {
 
     private void processGetByTypeRequest(){
         System.out.println("---Search By Type---");
-        String type = ConsoleHelper.promptForString("Enter Vehicle Type (Car, Truck, Van");
+        String type = ConsoleHelper.promptForString("Enter Vehicle Type (Car, Truck, Van)");
 
         ArrayList<Vehicle> results = dealership.findByType(type);
         displayVehicles(results);
@@ -183,7 +182,7 @@ public class UserInterface {
         String vehicleType = ConsoleHelper.promptForString("Enter Vehicle Type: ");
         String vehicleColor = ConsoleHelper.promptForString("Enter Vehicle Color: ");
         int odometer = ConsoleHelper.promptForInt("Enter Vehicle Mileage: ");
-        double price = ConsoleHelper.promptForDouble("Enter Vehicle Price");
+        double price = ConsoleHelper.promptForDouble("Enter Vehicle Price: ");
 
     }
 

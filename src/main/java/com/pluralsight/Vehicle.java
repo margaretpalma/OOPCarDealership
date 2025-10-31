@@ -60,15 +60,16 @@ public class Vehicle {
 
         @Override
         public String toString() {
-                return String.format("%d | %d %s %s | %s | %d mi | %.2f",
-                        vehicleVin,
-                        vehicleYear,
-                        vehicleMake,
-                        vehicleModel,
-                        vehicleType,
-                        vehicleColor,
-                        odometer,
-                        price);
+                return "Vehicle{" +
+                        "vehicleVin=" + vehicleVin +
+                        ", vehicleYear=" + vehicleYear +
+                        ", vehicleMake='" + vehicleMake + '\'' +
+                        ", vehicleModel='" + vehicleModel + '\'' +
+                        ", vehicleType='" + vehicleType + '\'' +
+                        ", vehicleColor='" + vehicleColor + '\'' +
+                        ", odometer=" + odometer +
+                        ", price=" + price +
+                        '}';
         }
 
         public String toFileFormat() {
