@@ -79,16 +79,17 @@ public class UserInterface {
     //todo: other menu options
     private void displayMenu() {
         System.out.println("*****Main Menu*****");
-
         System.out.println("1 - Find Vehicles By Price Range");
         System.out.println("2 - Find Vehicles By Make/Model");
         System.out.println("3 - Find Vehicles By Year Range");
         System.out.println("4 - Find Vehicles By Color");
-        System.out.println("5 - Find Vehicles By Type(Car, Truck, Van");
-        System.out.println("6 - List All Vehicles");
-        System.out.println("7 - Add A Vehicle");
-        System.out.println("8 - Remove A Vehicle");
+        System.out.println("5 - Find Vehicles By Mileage Range");
+        System.out.println("6 - Find Vehicles By Type (Car, Truck, Van)");
+        System.out.println("7 - List All Vehicles");
+        System.out.println("8 - Add A Vehicle");
+        System.out.println("9 - Remove A Vehicle");
         System.out.println("99 - Quit Program");
+
     }
 
     //list vehicles
@@ -184,6 +185,8 @@ public class UserInterface {
         int odometer = ConsoleHelper.promptForInt("Enter Vehicle Mileage: ");
         double price = ConsoleHelper.promptForDouble("Enter Vehicle Price: ");
 
+        System.out.println("**Vehicle Added**");
+
     }
 
     private void processRemoveVehicleRequest(){
@@ -193,6 +196,8 @@ public class UserInterface {
 
         ArrayList<Vehicle> results = dealership.removeVehicle(remove);
         displayVehicles(results);
+
+        System.out.println("**Vehicle Removed**");
 
     }
 }

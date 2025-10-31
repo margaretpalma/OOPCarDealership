@@ -60,16 +60,16 @@ public class Vehicle {
 
         @Override
         public String toString() {
-                return "Vehicle{" +
-                        "vehicleVin=" + vehicleVin +
-                        ", vehicleYear=" + vehicleYear +
-                        ", vehicleMake='" + vehicleMake + '\'' +
-                        ", vehicleModel='" + vehicleModel + '\'' +
-                        ", vehicleType='" + vehicleType + '\'' +
-                        ", vehicleColor='" + vehicleColor + '\'' +
-                        ", odometer=" + odometer +
-                        ", price=" + price +
-                        '}';
+                return "Vehicle|" +
+                        " Vin " + vehicleVin +
+                        " | Year - " + vehicleYear +
+                        " | Make - " + vehicleMake +
+                        " | Model - " + vehicleModel +
+                        " | Type - " + vehicleType +
+                        " | Color - " + vehicleColor +
+                        " | Odometer - " + odometer +
+                        " | Price - " + price +
+                        '|';
         }
 
         public String toFileFormat() {

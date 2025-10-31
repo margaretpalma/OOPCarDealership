@@ -36,6 +36,7 @@ public class Dealership {
     // return list
     public ArrayList<Vehicle> getAllVehicles() {
         return inventory;
+
     }
 
     // adding vehicle
